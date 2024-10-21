@@ -1,15 +1,13 @@
 import json
 import urllib.request
 import os
-import datetime
-
-dt_now = datetime.datetime.now()
+from datetime import datetime
 
 WEBHOOK_URL = os.environ["WEBHOOK_URL"]
 
 msg = {
   "embeds": [{
-    "timestamp": dt_now.isoformat()
+    "timestamp": datetime.utcnow()
   }]
 }
 
@@ -27,4 +25,3 @@ req = urllib.request.Request(
 
 with urllib.request.urlopen(req) as res:
   body = res.read()
-  print(body)
