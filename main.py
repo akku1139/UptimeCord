@@ -12,7 +12,7 @@ for cpu in psutil.cpu_percent(interval=0.3, percpu=True):
   cpus.append({
     "name": f"CPU{i}",
     "value": f"{cpu} %",
-    #"inline": True
+    "inline": True,
   })
   i += 1
 
