@@ -1,14 +1,14 @@
 import json
 import urllib.request
 import os
-from datetime import datetime
+import datetime
 
 WEBHOOK_URL = os.environ["WEBHOOK_URL"]
 
 msg = {
   "embeds": [{
     "description": "test",
-    "timestamp": datetime.now(datetime.UTC).isoformat(),
+    "timestamp": datetime.datetime.now(datetime.UTC).isoformat(),
   }]
 }
 
