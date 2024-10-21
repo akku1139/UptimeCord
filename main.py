@@ -1,11 +1,16 @@
 import json
 import urllib.request
 import os
+import datetime
+
+dt_now = datetime.datetime.now()
 
 WEBHOOK_URL = os.environ["WEBHOOK_URL"]
 
 msg = {
-  "content": "test"
+  "embeds": [{
+    "timestamp": dt_now.isoformat()
+  }]
 }
 
 headers = {
