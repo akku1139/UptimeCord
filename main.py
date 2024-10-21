@@ -16,7 +16,8 @@ headers = {
 req = urllib.request.Request(
   WEBHOOK_URL,
   json.dumps(msg).encode(),
-  headers
+  headers,
+  method="POST",
 )
 
 with urllib.request.urlopen(req) as res:
