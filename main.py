@@ -7,7 +7,8 @@ WEBHOOK_URL = os.environ["WEBHOOK_URL"]
 
 msg = {
   "embeds": [{
-    "timestamp": datetime.utcnow()
+    "description": "test",
+    "timestamp": datetime.now(datetime.UTC).isoformat(),
   }]
 }
 
