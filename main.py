@@ -7,6 +7,7 @@ WEBHOOK_URL = os.environ["WEBHOOK_URL"]
 
 msg = {
   "embeds": [{
+    "title": "Up Report"
     "fields": [
       {
         "name": "CPU"
