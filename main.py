@@ -7,7 +7,12 @@ WEBHOOK_URL = os.environ["WEBHOOK_URL"]
 
 msg = {
   "embeds": [{
-    "description": "test",
+    "fields": [
+      {
+        "name": "CPU"
+        "value": "xx.x %"
+      }
+    ]
     "timestamp": datetime.datetime.now(datetime.UTC).isoformat(),
   }]
 }
