@@ -13,7 +13,7 @@ headers = {
   "User-Agent": "DiscordBot (https://github.com/akku1139/UptimeCord, 0.0.1)",
 }
 
-while True:
+for _l in range(1440):
   i = 0
   cpus = []
   for cpu in psutil.cpu_percent(interval=0.3, percpu=True):
@@ -50,5 +50,5 @@ while True:
     body = res.read()
 
   time.sleep(60)
-  stdout = subprocess.run(["git","pull"], capture_output=True, text=True).stdout
-  log.info("git pull\n"+stdout)
+  # stdout = subprocess.run(["git","pull"], capture_output=True, text=True).stdout
+  # log.info("git pull\n"+stdout)
